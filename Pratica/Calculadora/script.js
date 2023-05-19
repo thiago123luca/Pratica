@@ -14,38 +14,93 @@ const btnAdd = document.getElementById("btnAdd")
 //     console.log("funcionando")
 //   });
 
-let num1 = ''
-let operador = undefined
-let num2 = ''
+let num = ''
+let operador = ''
+let arrayNum = []
+let result = 0
 
 function addVisor(value) {
-
-    visor.value += value
-
-    if(!operador){
-        num1 += value
-    }else{
-        num2 += value
-    }
-
+     visor.value += value
+     num += value
+     
+    
     console.log("funcionando");
+    // console.log('esse é o valor ' + value +' esse é o num '+ num )
 };
 
-function soma() {
+
+function expoente(valor) {
+    switch(valor){
+        case '+':
+            visor.value += "+";
+            operador = "+";
+            arrayNum.push(num);
+            result += Number(num)
+            num = '';
+            break;
+        case '-':
+            visor.value += "-"
+            operador = "-" ;
+            arrayNum.push(num);
+            result -= Number(arrayNum);
+            num = ''; 
+            break;
+        case '*':
+            visor.value += "*"
+            operador = "*"
+            break;
+        case '/':
+            visor.value += "/"
+            operador = "/"
+            break;
+        default:
+            console.log('Algo deu errado')
+            break;    
+    }
     
-    console.log(visor.value);
+    console.log(result);
     
-    visor.value += "+"
-    operador = "+"
+    // visor.value += "+"
+    // operador = "+"
+    
 }
 
 function resultado(){
+    arrayNum.push(num)
 
-    if(operador = "+"){
-        console.log(Number(num1) + Number(num2))
-        visor.value += `=${Number(num1) + Number(num2)}`
+    switch(operador){
+        case '+':
+            result += Number(num)
+            visor.value += `=${result}`
+            break;
+        case '-':
+            result -= Number(num)
+            visor.value += `=${result}`
+            break;
+        // case '*':
+        //     visor.value += `=${Number(num1) * Number(num2)}`
+        //     break;
+        // case '/':
+        //     visor.value += `=${Number(num1) / Number(num2)}`
+        //     break;
+        default:
+            console.log('Algo deu errado')
+            break;     
     }
+
+    // if(operador){
+    //     console.log(Number(num1) + Number(num2))
+    //     visor.value += `=${Number(num1) + Number(num2)}`
+    // }
     
 
-    console.log(num1, operador, num2)
+    console.log(result, arrayNum)
+}
+
+function limpar(){
+    result = 0
+    num = ''
+    arrayNum = []
+    operador = ''
+    visor.value = ''
 }
