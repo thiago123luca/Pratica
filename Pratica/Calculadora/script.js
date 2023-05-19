@@ -1,106 +1,69 @@
 const visor = document.getElementById("visor")
+const historico = document.getElementById("historico") 
 
 const btn1 = document.getElementById("btn1")
 const btn2 = document.getElementById("btn2")
 const btnAdd = document.getElementById("btnAdd")
 
 
-// btn1.addEventListener('click', function() {
-//     visor.value += '1';
-//   });
-
-//   btn2.addEventListener('click', function() {
-//     visor.value += '2';
-//     console.log("funcionando")
-//   });
-
 let num = ''
-let operador = ''
-let arrayNum = []
-let result = 0
+
+
 
 function addVisor(value) {
      visor.value += value
+     historico.value += value 
      num += value
-     
-    
+     let resultado = eval(visor.value)
+
+
     console.log("funcionando");
     // console.log('esse é o valor ' + value +' esse é o num '+ num )
 };
 
 
 function expoente(valor) {
+    
+
     switch(valor){
         case '+':
+            visor.value = eval(visor.value)
             visor.value += "+";
-            operador = "+";
-            arrayNum.push(num);
-            result += Number(num)
+            historico.value += "+"
             num = '';
             break;
         case '-':
+            visor.value = eval(visor.value)
             visor.value += "-"
-            operador = "-" ;
-            arrayNum.push(num);
-            result -= Number(arrayNum);
+            historico.value += "-"
             num = ''; 
             break;
         case '*':
+            visor.value = eval(visor.value)
             visor.value += "*"
-            operador = "*"
+            historico.value += "*"
             break;
         case '/':
+            visor.value = eval(visor.value)
             visor.value += "/"
-            operador = "/"
+            historico.value += "/"
             break;
         default:
             console.log('Algo deu errado')
             break;    
     }
     
-    console.log(result);
     
-    // visor.value += "+"
-    // operador = "+"
     
 }
 
 function resultado(){
-    arrayNum.push(num)
-
-    switch(operador){
-        case '+':
-            result += Number(num)
-            visor.value += `=${result}`
-            break;
-        case '-':
-            result -= Number(num)
-            visor.value += `=${result}`
-            break;
-        // case '*':
-        //     visor.value += `=${Number(num1) * Number(num2)}`
-        //     break;
-        // case '/':
-        //     visor.value += `=${Number(num1) / Number(num2)}`
-        //     break;
-        default:
-            console.log('Algo deu errado')
-            break;     
-    }
-
-    // if(operador){
-    //     console.log(Number(num1) + Number(num2))
-    //     visor.value += `=${Number(num1) + Number(num2)}`
-    // }
-    
-
-    console.log(result, arrayNum)
+    let resultado = eval(visor.value)
+    visor.value += `=${resultado}`
+    historico.value += `=${resultado} \n`
 }
 
 function limpar(){
-    result = 0
     num = ''
-    arrayNum = []
-    operador = ''
     visor.value = ''
 }
