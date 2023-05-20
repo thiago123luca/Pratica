@@ -10,6 +10,19 @@ let num = ''
 
 
 
+function formatarNumero(numero) {
+    return numero.toLocaleString('pt-BR');
+}
+    
+function formatarNumeroOriginal(numeroFormatado) {
+    var numeroSemPonto = numeroFormatado.replace(/\./g, '');
+    return parseFloat(numeroSemPonto.replace(',', '.'));
+}
+  
+
+
+
+
 function addVisor(value) {
      visor.value += value
      historico.value += value 
@@ -24,15 +37,19 @@ function addVisor(value) {
 
 function expoente(valor) {
     
+   
 
     switch(valor){
         case '+':
+            console.log(formatarNumero(Number(num)))
             visor.value = eval(visor.value)
             visor.value += "+";
             historico.value += "+"
             num = '';
             break;
         case '-':
+            let numero = formatarNumero(Number(num))
+            console.log(numero)
             visor.value = eval(visor.value)
             visor.value += "-"
             historico.value += "-"
@@ -48,6 +65,12 @@ function expoente(valor) {
             visor.value += "/"
             historico.value += "/"
             break;
+        
+        case '.':
+            num += "."
+            visor.value += "."
+            historico.value += "."
+            break;
         default:
             console.log('Algo deu errado')
             break;    
@@ -59,11 +82,22 @@ function expoente(valor) {
 
 function resultado(){
     let resultado = eval(visor.value)
-    visor.value += `=${resultado}`
-    historico.value += `=${resultado} \n`
+    visor.value = `${resultado}`
+    historico.value += `=${resultado} \n${resultado}`
+    
 }
 
 function limpar(){
+    var linhas = historico.value.split("\n");
     num = ''
     visor.value = ''
+    if (linhas.length > 1) {
+        linhas.pop();
+        historico.value = linhas.join("\n");
+        historico.value += "\n"
+      }
+}
+
+function apagar(){
+    historico.value
 }
