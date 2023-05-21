@@ -10,6 +10,7 @@ let num = ''
 
 
 
+
 function formatarNumero(numero) {
     return numero.toLocaleString('pt-BR');
 }
@@ -20,10 +21,11 @@ function formatarNumeroOriginal(numeroFormatado) {
 }
   
 
-
+console.log(formatarNumero(Number(num)))
 
 
 function addVisor(value) {
+    formatarNumero(Number(value))
      visor.value += value
      historico.value += value 
      num += value
@@ -41,15 +43,12 @@ function expoente(valor) {
 
     switch(valor){
         case '+':
-            console.log(formatarNumero(Number(num)))
             visor.value = eval(visor.value)
             visor.value += "+";
             historico.value += "+"
             num = '';
             break;
         case '-':
-            let numero = formatarNumero(Number(num))
-            console.log(numero)
             visor.value = eval(visor.value)
             visor.value += "-"
             historico.value += "-"
