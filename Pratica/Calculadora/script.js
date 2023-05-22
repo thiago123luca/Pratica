@@ -26,7 +26,6 @@ function formatarNumero(numero) {
 function addVisor(value) {
 
      visor.value += value
-     historico.value += value
      calc += value
      num += value
 
@@ -37,34 +36,34 @@ function addVisor(value) {
 console.log(calc)
 
 function expoente(valor) {
-    formatarNumero(Number(num))
-    console.log(num)
+   
 
     switch(valor){
         case '+':
+            visor.value = formatarNumero(Number(eval(calc))) + "+";
+            historico.value += formatarNumero(Number(eval(num))) + "+"
             calc = eval(calc)
             calc += "+"
-            visor.value = calc;
-            historico.value += "+"
+           
             num = '';
             break;
         case '-':
+            visor.value = formatarNumero(Number(eval(calc))) + "-";
             calc = eval(calc)
             calc += "-"
-            visor.value = calc;
             historico.value += "-"
             num = ''; 
             break;
         case '*':
+            visor.value = formatarNumero(Number(eval(calc))) + "*";
             calc = eval(calc)
             calc += "*"
-            visor.value = calc;
             historico.value += "*"
             break;
         case '/':
+            visor.value = formatarNumero(Number(eval(calc))) + "/";
             calc = eval(calc)
             calc += "/"
-            visor.value = calc;
             historico.value += "/"
             break;
         default:
@@ -75,17 +74,18 @@ function expoente(valor) {
 
 function pontuacao(){
     calc += "."
-    historico.value += ","
+    num += "."
     visor.value += ","
 }
 
 function resultado(){
     let resultado = eval(calc)
+    historico.value += formatarNumero(Number(eval(num)))
     calc = `${resultado}`
-    visor.value = `${resultado}`
-    historico.value += `=${resultado} \n${resultado}`
+    visor.value = `${formatarNumero(Number(resultado))}`
+    historico.value += `=${formatarNumero(Number(resultado))} \n`
     console.log(resultado)
-    
+    num = resultado
 }
 
 function limpar(){
@@ -106,6 +106,13 @@ function limpar(){
 function apagar(){
     console.log(calc)
     calc = calc.slice(0, -1)
-    historico.value = historico.value.slice(0, -1)
-    visor.value = visor.value.slice(0, -1)
+    var linhas = historico.value.split("\n");
+    if (linhas.length > 1) {
+        linhas.pop();
+        historico.value = linhas.join("\n");
+        historico.value += "\n"
+      }else{
+        historico.value = ""
+      }
+    visor.value = calc
 }

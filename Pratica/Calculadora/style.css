@@ -49,7 +49,7 @@ button{
     border: none;
     border-radius: 10px;
     min-width: 50px;
-    height: 50px;
+    min-height: 50px;
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
@@ -63,13 +63,23 @@ button:hover{
 
 #Numeros{
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 }
 
 #zero{
 
-    grid-column: 2; 
+    grid-column: span 2; 
 
+}
+
+#apagar{
+    grid-column: span 2; 
+}
+
+#igual{
+    grid-row: span 4;
+ 
+    
 }
