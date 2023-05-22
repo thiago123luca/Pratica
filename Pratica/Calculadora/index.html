@@ -15,25 +15,32 @@
         
         <textarea id="historico" readonly></textarea>
         <input type="text" id="visor" readonly>
-        <button onclick="addVisor('0')">0</button>
-        <button onclick="addVisor('1')">1</button>
-        <button onclick="addVisor('2')">2</button>
-        <button onclick="addVisor('3')">3</button>
-        <button onclick="addVisor('4')">4</button>
-        <button onclick="addVisor('5')">5</button>
-        <button onclick="addVisor('6')">6</button>
-        <button onclick="addVisor('7')">7</button>
-        <button onclick="addVisor('8')">8</button>
-        <button onclick="addVisor('9')">9</button>
 
-        <button onclick="pontuacao()">,</button>
+        <div id="Numeros">
+            <button onclick="addVisor('1')">1</button>
+            <button onclick="addVisor('2')">2</button>
+            <button onclick="addVisor('3')">3</button>
+            <button onclick="addVisor('4')">4</button>
+            <button onclick="addVisor('5')">5</button>
+            <button onclick="addVisor('6')">6</button>
+            <button onclick="addVisor('7')">7</button>
+            <button onclick="addVisor('8')">8</button>
+            <button onclick="addVisor('9')">9</button>
+            <button onclick="apagar()" >APAGAR </button>
+            <button id="zero" onclick="addVisor('0')">0</button>
+            <button onclick="pontuacao()">,</button>
+            
+        </div>
+        
+
+        
         <button onclick="expoente('+')">+</button>
         <button onclick="expoente('-')">-</button>
         <button onclick="expoente('*')">*</button>
         <button onclick="expoente('/')">/</button>
         <button onclick="resultado()">=</button>
         <button onclick="limpar()" >C</button>
-        <button onclick="apagar()" >APAGAR </button>
+        
     
     </div>
 

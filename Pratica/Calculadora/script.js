@@ -24,7 +24,7 @@ function formatarNumero(numero) {
 
 
 function addVisor(value) {
-    formatarNumero(Number(value))
+
      visor.value += value
      historico.value += value
      calc += value
@@ -37,7 +37,8 @@ function addVisor(value) {
 console.log(calc)
 
 function expoente(valor) {
- console.log(calc)
+    formatarNumero(Number(num))
+    console.log(num)
 
     switch(valor){
         case '+':
