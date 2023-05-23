@@ -14,9 +14,15 @@ body{
 .div{
     padding: 20px;
     background-color: rgb(53, 53, 53);
-    width: 400px;
     margin-top: 50px;
-    border-radius: 20px;
+    box-shadow:inset 0px 1px 3px 0px #cfcfcf;
+	background:linear-gradient(to bottom, #525756 5%, #1a1a1a 100%);
+	background-color:#525756;
+	border-radius:20px;
+	border:1px solid #0c0d0d;
+	display:inline-block;
+	color:#ffffff;
+    
 }
 
 #historico{
@@ -24,11 +30,23 @@ body{
     background-color: black;
     border: none;
     display: block;
-    width: 100%;
+    width: 94%;
     height: 100px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     resize: none; 
+    box-shadow:inset 0px 1px 3px 0px #101a13;
+	background:linear-gradient(to bottom, #9dc4a7 5%, #366145 100%);
+	background-color:#9dc4a7;
+	border-radius:5px 5px 0px 0px;
+	border:1px solid #19965e;
+	color:#0c0c0c;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+    padding: 10px;
+	text-decoration:none;
+    
 }
 
 #visor{
@@ -37,29 +55,53 @@ body{
     text-align: right;
     border: none;
     display: block;
-    width: 100%;
+    width: 94%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 19px;
     resize: none; 
+    box-shadow:inset 0px 1px 3px 0px #101a13;
+	background:linear-gradient(to bottom, #414141 5%, #1f1f1f 100%);
+	background-color:#9dc4a7;
+	border-radius:0px 0px 5px 5px;
+	border:1px solid #181818;
+	color:#06ee54;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+    padding: 10px;
+	text-decoration:none;
 }
 
 .buttonUm{
     margin: 5px;
-    background-color: azure;
-    color: black;
-    border: none;
-    border-radius: 10px;
+    padding: 20px;
     min-width: 50px;
     min-height: 50px;
-    font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+    box-shadow:inset 0px 6px 16px -12px #365c23;
+	background:linear-gradient(to bottom, #33c42b 5%, #418749 100%);
+	background-color:#33c42b;
+	border-radius:17px;
+	border:1px solid #24a33f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:32px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 2px 4px #2c6627;
     
 }
 
 .buttonUm:hover{
-    color: rgb(14, 255, 6);
-    background-color: black;
-    border: solid 1px rgb(14, 255, 6);
+    background:linear-gradient(to bottom, #418749 5%, #33c42b 100%);
+	background-color:#418749;
+}
+
+.buttonUm:active{
+    position:relative;
+	top:1px;
 }
 
 #Numeros{
@@ -81,13 +123,62 @@ body{
 
 
 .number{
-    background-color: rgb(180, 180, 180);
+    box-shadow:inset 0px 6px 16px -12px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:17px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:32px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 2px 4px #2b665e;
 }
+
+.number:hover{
+    background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+
+.number:active{
+    position:relative;
+	top:1px;
+}
+
+.igual{
+    font-size: 32px;
+    box-shadow:inset 0px 6px 16px -12px #d9fbbe;
+	background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+	background-color:#b8e356;
+	border-radius:17px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 2px 4px #86ae47;
+}
+
+.igual:hover{
+    background:linear-gradient(to bottom, #a5cc52 100%, #89a83f 5%);
+	background-color:#779238;;
+}
+
+.igual:active{
+    position:relative;
+	top:1px;
+}
+
 
 
 .div1{
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(162, 241, 15);
     width: 400px;
     margin-top: 50px;
     border-radius: 20px;
