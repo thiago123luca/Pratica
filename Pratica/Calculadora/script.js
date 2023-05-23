@@ -120,38 +120,50 @@ function apagar(){
     visor.value = calc
     num = calc
 }
+for(let i = 0; button.length > i; i++){
+    button[i].classList.add("buttonUm")
+}
+
 
 function trocarCor(){
 
-    const button = document.getElementById("trocaDeCor")
+    const trocaDeCor = document.getElementById("trocaDeCor")
 
-        if(button.classList.contains("black")){
+        if(trocaDeCor.classList.contains("black")){
             console.log("ativado");
+            calculadora.classList.remove("div")
             calculadora.classList.add("div1");
+
             body.style.backgroundColor = 'white'
            
-           
-            for(let i =0; button.length > i; i++ ){
-                button[i].style.backgroundColor = "white"
-                button[i].style.border = "2px solid gray"
+            for(let i = 0; button.length > i; i++){
+                button[i].classList.remove("buttonUm")
+                button[i].classList.add("buttonDois")
             }
-
-            button.classList.remove("black")
-            button.classList.add("white")
             
-        }else if (button.classList.contains("white")){
+            
+
+            trocaDeCor.classList.remove("black")
+            trocaDeCor.classList.add("white")
+
+        }
+        else if (trocaDeCor.classList.contains("white")){
 
             console.log("desativado");
+            calculadora.classList.remove("div1");
             calculadora.classList.add("div");
+
             body.style.backgroundColor = 'black'
            
-           
-            for(let i =0; button.length > i; i++ ){
-                button[i].style.backgroundColor = "white"
-                button[i].style.border = "2px solid gray"
+            for(let i = 0; button.length > i; i++){
+                button[i].classList.remove("buttonDois")
+                button[i].classList.add("buttonUm")
             }
-            button.classList.remove("white")
-            button.classList.add("black")
+            
+
+
+            trocaDeCor.classList.remove("white")
+            trocaDeCor.classList.add("black")
         }
        
  
