@@ -122,15 +122,38 @@ function apagar(){
 }
 
 function trocarCor(){
-    console.log("ativado");
-    calculadora.classList.add("div1");
-    body.style.backgroundColor = 'white'
 
+    const button = document.getElementById("trocaDeCor")
 
-    for(let i =0; button.length > i; i++ ){
-        button[i].style.backgroundColor = "white"
-        button[i].style.border = "2px solid gray"
-    }
+        if(button.classList.contains("black")){
+            console.log("ativado");
+            calculadora.classList.add("div1");
+            body.style.backgroundColor = 'white'
+           
+           
+            for(let i =0; button.length > i; i++ ){
+                button[i].style.backgroundColor = "white"
+                button[i].style.border = "2px solid gray"
+            }
 
+            button.classList.remove("black")
+            button.classList.add("white")
+            
+        }else if (button.classList.contains("white")){
+
+            console.log("desativado");
+            calculadora.classList.add("div");
+            body.style.backgroundColor = 'black'
+           
+           
+            for(let i =0; button.length > i; i++ ){
+                button[i].style.backgroundColor = "white"
+                button[i].style.border = "2px solid gray"
+            }
+            button.classList.remove("white")
+            button.classList.add("black")
+        }
+       
+ 
     
 }
