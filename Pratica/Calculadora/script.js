@@ -1,7 +1,8 @@
 const visor = document.getElementById("visor")
 const historico = document.getElementById("historico") 
-
-
+const calculadora = document.getElementById("calculadora")
+const body = document.getElementById("body")
+const button = document.getElementsByTagName("button")
 
 
 let num = ''
@@ -44,27 +45,29 @@ function expoente(valor) {
             historico.value += formatarNumero(Number(eval(num))) + "+"
             calc = eval(calc)
             calc += "+"
-           
             num = '';
             break;
         case '-':
             visor.value = formatarNumero(Number(eval(calc))) + "-";
+            historico.value += formatarNumero(Number(eval(num))) + "-"
             calc = eval(calc)
             calc += "-"
-            historico.value += "-"
             num = ''; 
             break;
         case '*':
             visor.value = formatarNumero(Number(eval(calc))) + "*";
+            historico.value += formatarNumero(Number(eval(num))) + "*"
             calc = eval(calc)
             calc += "*"
-            historico.value += "*"
+            num = ''; 
             break;
         case '/':
             visor.value = formatarNumero(Number(eval(calc))) + "/";
+            historico.value += formatarNumero(Number(eval(num))) + "/"
             calc = eval(calc)
             calc += "/"
             historico.value += "/"
+            num = ''; 
             break;
         default:
             console.log('Algo deu errado')
@@ -115,4 +118,19 @@ function apagar(){
         historico.value = ""
       }
     visor.value = calc
+    num = calc
+}
+
+function trocarCor(){
+    console.log("ativado");
+    calculadora.classList.add("div1");
+    body.style.backgroundColor = 'white'
+
+
+    for(let i =0; button.length > i; i++ ){
+        button[i].style.backgroundColor = "white"
+        button[i].style.border = "2px solid gray"
+    }
+
+    
 }

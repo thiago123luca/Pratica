@@ -15,7 +15,8 @@ body{
     padding: 20px;
     background-color: rgb(53, 53, 53);
     width: 400px;
-    
+    margin-top: 50px;
+    border-radius: 20px;
 }
 
 #historico{
@@ -78,8 +79,17 @@ button:hover{
     grid-column: span 2; 
 }
 
-#igual{
-    grid-row: span 4;
- 
-    
+
+.number{
+    background-color: rgb(180, 180, 180);
+}
+
+
+.div1{
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 2px solid gray;
 }
