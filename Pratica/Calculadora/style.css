@@ -214,5 +214,11 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgb(228, 36, 36);
+    border: none;
+    background: none;
+    color: #fdd005;
+    text-decoration:none;
+    text-shadow: none;
+    border-style: none;
+    box-shadow: none;
 }

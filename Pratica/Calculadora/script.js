@@ -128,6 +128,7 @@ for(let i = 0; button.length > i; i++){
 function trocarCor(){
 
     const trocaDeCor = document.getElementById("trocaDeCor")
+    const buttonCor = document.getElementById("buttonCor")
 
         if(trocaDeCor.classList.contains("black")){
             console.log("ativado");
@@ -142,6 +143,10 @@ function trocarCor(){
             }
             
             
+            buttonCor.classList.remove("fas", "fa-sun", "sun-icon")
+            buttonCor.classList.add("fas", "fa-moon", "moon-icon")
+
+            buttonCor.style.color = "#666666"
 
             trocaDeCor.classList.remove("black")
             trocaDeCor.classList.add("white")
@@ -160,7 +165,10 @@ function trocarCor(){
                 button[i].classList.add("buttonUm")
             }
             
+            buttonCor.classList.remove("fas", "fa-moon", "moon-icon")
+            buttonCor.classList.add("fas", "fa-sun", "sun-icon")
 
+            buttonCor.style.color = "#fdd005"
 
             trocaDeCor.classList.remove("white")
             trocaDeCor.classList.add("black")
