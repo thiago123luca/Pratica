@@ -11,6 +11,7 @@ body{
     background-color: black;
 }
 
+
 .div{
     padding: 20px;
     background-color: rgb(53, 53, 53);
@@ -74,14 +75,12 @@ body{
 
 .buttonUm{
     margin: 5px;
-    padding: 20px;
     min-width: 50px;
     min-height: 50px;
-    font-family:Arial, Helvetica, sans-serif;
     box-shadow:inset 0px 6px 16px -12px #365c23;
 	background:linear-gradient(to bottom, #33c42b 5%, #418749 100%);
 	background-color:#33c42b;
-	border-radius:17px;
+	border-radius:6px;
 	border:1px solid #24a33f;
 	display:inline-block;
 	cursor:pointer;
@@ -126,14 +125,11 @@ body{
     box-shadow:inset 0px 6px 16px -12px #91b8b3;
 	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
 	background-color:#768d87;
-	border-radius:17px;
 	border:1px solid #566963;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:32px;
-	padding:9px 23px;
 	text-decoration:none;
 	text-shadow:0px 2px 4px #2b665e;
 }
@@ -149,17 +145,14 @@ body{
 }
 
 .igual{
-    font-size: 32px;
     box-shadow:inset 0px 6px 16px -12px #d9fbbe;
 	background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
 	background-color:#b8e356;
-	border-radius:17px;
 	border:1px solid #83c41a;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	padding:9px 23px;
 	text-decoration:none;
 	text-shadow:0px 2px 4px #86ae47;
 }
@@ -179,27 +172,47 @@ body{
 .div1{
     padding: 20px;
     background-color: rgb(248, 248, 248);
-    width: 400px;
+
     margin-top: 50px;
     border-radius: 20px;
     border: 2px solid gray;
+    display: inline-block;
 }
 
 .buttonDois{
     margin: 5px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(250, 250, 250);
-    border: none;
-    border-radius: 10px;
     min-width: 50px;
     min-height: 50px;
-    font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:32px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
     
 }
 
 .buttonDois:hover{
-    color: rgb(6, 255, 48);
-    background-color: black;
-    border: solid 1px rgb(6, 255, 39);
+    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+
+.buttonDois:active{
+    position:relative;
+	top:1px;
+}
+
+#trocaDeCor{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(228, 36, 36);
 }
