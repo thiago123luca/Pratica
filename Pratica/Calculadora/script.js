@@ -9,7 +9,14 @@ let num = ''
 let calc = ''
 
 
+function calculo(string){
+   return string.split(/+/)
 
+
+
+}
+
+console.log(calculo('10+10'))
 
 function formatarNumero(numero) {
     return numero.toLocaleString('pt-BR');
