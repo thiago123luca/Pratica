@@ -9,14 +9,48 @@ let num = ''
 let calc = ''
 
 
-function calculo(string){
-   return string.split(/+/)
-
-
-
+function calculo(expressao){
+    const operadores = expressao.match(/[+\-*/]/); // Encontrar os operadores na expressão
+    const numeros = expressao.split(/[+\-*/]/).map(parseFloat); // Encontrar os números na expressão e converter para valores numéricos
+    
+    let resultado = numeros[0];
+    
+    if (numeros.length < 2){
+        return resultado
+    }else{
+        for (let i = 0; i < operadores.length; i++) {
+            const operador = operadores[i];
+            const numero = numeros[i + 1];
+        
+            switch (operador) {
+              case '+':
+                resultado += numero;
+                break;
+              case '-':
+                resultado -= numero;
+                break;
+              case '*':
+                resultado *= numero;
+                break;
+              case '/':
+                resultado /= numero;
+                break;
+              default:
+                break;
+            }
+          }
+    }
+  
+    
+  
+    return resultado;
 }
 
-console.log(calculo('10+10'))
+
+
+
+
+
 
 function formatarNumero(numero) {
     return numero.toLocaleString('pt-BR');
@@ -48,30 +82,30 @@ function expoente(valor) {
 
     switch(valor){
         case '+':
-            visor.value = formatarNumero(Number(eval(calc))) + "+";
-            historico.value += formatarNumero(Number(eval(num))) + "+"
-            calc = eval(calc)
+            visor.value = formatarNumero(calculo(calc)) + "+";
+            historico.value += formatarNumero(Number(num)) + "+"
+            calc = calculo(calc)
             calc += "+"
             num = '';
             break;
         case '-':
-            visor.value = formatarNumero(Number(eval(calc))) + "-";
-            historico.value += formatarNumero(Number(eval(num))) + "-"
-            calc = eval(calc)
+            visor.value = formatarNumero(calculo(calc)) + "-";
+            historico.value += formatarNumero(Number(num)) + "-"
+            calc = calculo(calc)
             calc += "-"
             num = ''; 
             break;
         case '*':
-            visor.value = formatarNumero(Number(eval(calc))) + "*";
-            historico.value += formatarNumero(Number(eval(num))) + "*"
-            calc = eval(calc)
+            visor.value = formatarNumero(calculo(calc)) + "*";
+            historico.value += formatarNumero(Number(num)) + "*"
+            calc = calculo(calc)
             calc += "*"
             num = ''; 
             break;
         case '/':
-            visor.value = formatarNumero(Number(eval(calc))) + "/";
-            historico.value += formatarNumero(Number(eval(num))) + "/"
-            calc = eval(calc)
+            visor.value = formatarNumero(calculo(calc)) + "/";
+            historico.value += formatarNumero(Number(num)) + "/"
+            calc = calculo(calc)
             calc += "/"
             historico.value += "/"
             num = ''; 
@@ -89,12 +123,11 @@ function pontuacao(){
 }
 
 function resultado(){
-    let resultado = eval(calc)
-    historico.value += formatarNumero(Number(eval(num)))
+    let resultado = calculo(calc)
+    historico.value += formatarNumero(Number(num))
     calc = `${resultado}`
     visor.value = `${formatarNumero(Number(resultado))}`
     historico.value += `=${formatarNumero(Number(resultado))} \n`
-    console.log(resultado)
     num = resultado
 }
 
