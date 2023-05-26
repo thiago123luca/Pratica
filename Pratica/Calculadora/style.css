@@ -4,6 +4,7 @@
     
 }
 
+/* Body (Background) */
 body{
     display: flex;
     align-items: center;
@@ -52,16 +53,11 @@ body{
     display: inline-block;
 }
 
-
+/* Painel de Historico de calculos */
 #historico{
-    color: darkgray;
-    background-color: black;
-    border: none;
     display: block;
     width: 94%;
     height: 100px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
     resize: none; 
     box-shadow:inset 0px 1px 3px 0px #101a13;
 	background:linear-gradient(to bottom, #9dc4a7 5%, #366145 100%);
@@ -73,19 +69,14 @@ body{
 	font-size:15px;
 	font-weight:bold;
     padding: 10px;
-	text-decoration:none;
-    
+	text-decoration:none;   
 }
 
-#visor{
-    color: rgb(14, 255, 6);
-    background-color: rgb(36, 36, 36);
+/* Painel de Calculos */
+#visor{ 
     text-align: right;
-    border: none;
     display: block;
     width: 94%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 19px;
     resize: none; 
     box-shadow:inset 0px 1px 3px 0px #101a13;
 	background:linear-gradient(to bottom, #414141 5%, #1f1f1f 100%);
@@ -94,13 +85,14 @@ body{
 	border:1px solid #181818;
 	color:#06ee54;
 	font-family:Arial;
-	font-size:15px;
+	font-size:19px;
 	font-weight:bold;
     padding: 10px;
 	text-decoration:none;
 }
 
-.buttonUm{
+/* Botao - padrão de cores um */
+.buttonPadraoUm{
     margin: 5px;
     min-width: 50px;
     min-height: 50px;
@@ -120,29 +112,65 @@ body{
     
 }
 
-.buttonUm:hover{
+/* Botao - padrão de cores um */
+.buttonPadraoUm:hover{
     background:linear-gradient(to bottom, #418749 5%, #33c42b 100%);
 	background-color:#418749;
 }
 
-.buttonUm:active{
+/* Botao - padrão de cores um */
+.buttonPadraoUm:active{
     position:relative;
 	top:1px;
 }
 
-#Numeros{
+/* Botao - padrão de cores dois */
+.buttonPadraoDois{
+    margin: 5px;
+    min-width: 50px;
+    min-height: 50px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:32px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    
+}
+
+/* Botao - padrão de cores dois */
+.buttonPadraoDois:hover{
+    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+
+/* Botao - padrão de cores dois */
+.buttonPadraoDois:active{
+    position:relative;
+	top:1px;
+}
+
+
+/* organizador dos botões */
+#buttonEOperadores{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 }
-
 #zero{
 
     grid-column: span 2; 
 
 }
-
 #apagar{
     grid-column: span 2; 
 }
@@ -195,35 +223,4 @@ body{
 }
 
 
-
-.buttonDois{
-    margin: 5px;
-    min-width: 50px;
-    min-height: 50px;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:32px;
-	font-weight:bold;
-	padding:9px 23px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-    
-}
-
-.buttonDois:hover{
-    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-}
-
-.buttonDois:active{
-    position:relative;
-	top:1px;
-}
 

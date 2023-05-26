@@ -3,21 +3,21 @@ const visor = document.getElementById("visor")
 const historico = document.getElementById("historico") 
 const calculadora = document.getElementById("calculadora")
 const body = document.getElementById("body")
-const button = document.getElementsByTagName("button")
+const buttonCalc = document.getElementsByTagName("button")
 
 let num = ''
 let calc = ''
 
 // adicionar a classe aos botões
-for(let i = 0; button.length > i; i++){
-    button[i].classList.add("buttonUm")
+for(let i = 0; buttonCalc.length > i; i++){
+    buttonCalc[i].classList.add("buttonPadraoUm")
 }
 
 
 // Button troca de cor
 function buttonTrocarCor(){
 
-    // Acessar o padrão de cores do botão
+    // Acessar o padrão de cores do botão determinado pelo botão troca de cor
     const trocaDeCor = document.getElementById("buttonTrocaDeCor")
     const buttonCor = document.getElementById("buttonCor")
 
@@ -31,39 +31,44 @@ function buttonTrocarCor(){
             // troca de cor do body (fundo)
             body.style.backgroundColor = 'white'
            
-            for(let i = 0; button.length > i; i++){
-                button[i].classList.remove("buttonUm")
-                button[i].classList.add("buttonDois")
+            // trocar de padrão de cores dos botões da calculadora
+            for(let i = 0; buttonCalc.length > i; i++){
+                buttonCalc[i].classList.remove("buttonPadraoUm")
+                buttonCalc[i].classList.add("buttonPadraoDois")
             }
             
-            
+            // troca do icon do botão troca de cor e troca de cor
             buttonCor.classList.remove("fas", "fa-sun", "sun-icon")
             buttonCor.classList.add("fas", "fa-moon", "moon-icon")
-
             buttonCor.style.color = "#666666"
 
+            // troca do padrão de cores do botão troca de cor
             trocaDeCor.classList.remove("black")
             trocaDeCor.classList.add("white")
 
         }
+        // verificar em qual padrão de cores está
         else if (trocaDeCor.classList.contains("white")){
 
-            console.log("desativado");
+             // troca de cor do corpo da calculadora
             calculadora.classList.remove("padraoDeCorDois");
             calculadora.classList.add("padraoDeCorUm");
 
+            // troca de cor do body (fundo)
             body.style.backgroundColor = 'black'
            
-            for(let i = 0; button.length > i; i++){
-                button[i].classList.remove("buttonDois")
-                button[i].classList.add("buttonUm")
+            // trocar de padrão de cores dos botões da calculadora
+            for(let i = 0; buttonCalc.length > i; i++){
+                buttonCalc[i].classList.remove("buttonPadraoDois")
+                buttonCalc[i].classList.add("buttonPadraoUm")
             }
             
+             // troca do icon do botão troca de cor e troca de cor
             buttonCor.classList.remove("fas", "fa-moon", "moon-icon")
             buttonCor.classList.add("fas", "fa-sun", "sun-icon")
-
             buttonCor.style.color = "#fdd005"
 
+             // troca do padrão de cores do botão troca de cor
             trocaDeCor.classList.remove("white")
             trocaDeCor.classList.add("black")
         }
