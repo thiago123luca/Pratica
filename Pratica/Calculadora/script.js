@@ -5,6 +5,7 @@ const calculadora = document.getElementById("calculadora")
 const body = document.getElementById("body")
 const buttonCalc = document.getElementsByTagName("button")
 
+// variavel usada para as funções
 let num = ''
 let calc = ''
 
@@ -135,7 +136,7 @@ function buttonTrocarCor(){
 }
 
 
-
+// função de calculo, (subistitui o eval, por essa função, pois traz mais segurança e mais facil de analisar os precessos)
 function calculo(expressao){
     const operadores = expressao.match(/[+\-*/]/g);
     const numeros = expressao.split(/[+\-*/]/g).map(parseFloat);
@@ -177,28 +178,23 @@ function calculo(expressao){
 
 
 
-
+// função transfomar um numero basico, em um numero com casas decimais
 function formatarNumero(numero) {
     return numero.toLocaleString('pt-BR');
 }
     
 
-
+// adiciona o numero ao visor
 function addVisor(value) {
 
      visor.value += value
      calc += value
      num += value
-
-    console.log("funcionando");
-    // console.log('esse é o valor ' + value +' esse é o num '+ num )
 };
 
-console.log(calc)
 
-function expoente(valor) {
-   
-
+// Essa função adiciona o operador ao calculo
+function operador(valor) {
     switch(valor){
         case '+':
             visor.value = formatarNumero(calculo(calc)) + "+";
@@ -235,12 +231,14 @@ function expoente(valor) {
     }        
 }
 
+// função para adcionar pontuação
 function pontuacao(){
     calc += "."
     num += "."
     visor.value += ","
 }
 
+// função para gerar o resultado
 function resultado(){
     let resultado = calculo(calc)
     historico.value += formatarNumero(Number(num))
@@ -250,6 +248,7 @@ function resultado(){
     num = resultado
 }
 
+// função para limpar o visor 
 function limpar(){
     // historico.value += "\n"
     var linhas = historico.value.split("\n");
@@ -265,6 +264,7 @@ function limpar(){
       }
 }
 
+// função para apagar um caractere
 function apagar(){
     console.log(calc)
     calc = calc.slice(0, -1)
