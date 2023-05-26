@@ -36,7 +36,29 @@ function buttonTrocarCor(){
                 buttonCalc[i].classList.add("buttonPadraoDois")
 
             }
-    
+            
+            // trocar padrão de cores dos numeros
+            const numbers = document.querySelectorAll(".number")
+            for(let i = 0; numbers.length > i; i++){
+                numbers[i].style.color = "#505050";
+                numbers[i].style.boxshadow = "inset 0px 6px 16px -12px #91b8b3";
+                numbers[i].style.background = "linear-gradient(to bottom, #c4c4c4 5%, #9b9b9b 100%)";
+                numbers[i].style.backgroundcolor = "#ffffff";
+                numbers[i].style.border= "1px solid #dcdcdc";
+                numbers[i].style.textshadow="0px 1px 0px #ffffff";
+            }
+
+            // trocar padrão de cores do igual
+            const igual = document.querySelectorAll(".igual")
+            for(let i = 0; igual.length > i; i++){
+                igual[i].style.color = "#505050";
+                igual[i].style.boxshadow = "inset 0px 6px 16px -12px #91b8b3";
+                igual[i].style.background = "linear-gradient(to bottom, #c4c4c4 5%, #9b9b9b 100%)";
+                igual[i].style.backgroundcolor = "#ffffff";
+                igual[i].style.border= "1px solid #dcdcdc";
+                igual[i].style.textshadow="0px 1px 0px #ffffff";
+            }
+           
             
             // troca do icon do botão troca de cor e troca de cor
             buttonCor.classList.remove("fas", "fa-sun", "sun-icon")
@@ -65,7 +87,34 @@ function buttonTrocarCor(){
             for(let i = 0; buttonCalc.length > i; i++){
                 buttonCalc[i].classList.remove("buttonPadraoDois")
                 buttonCalc[i].classList.add("buttonPadraoUm")
+
+
             }
+
+
+            // trocar padrão de cores dos numeros
+            const numbers = document.querySelectorAll(".number")
+            for(let i = 0; numbers.length > i; i++){
+                numbers[i].style.color = "#ffffff";
+                numbers[i].style.boxshadow = "inset 0px 6px 16px -12px #91b8b3";
+                numbers[i].style.background = "linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%)";
+                numbers[i].style.backgroundcolor = "#768d87";
+                numbers[i].style.border= "1px solid #566963";
+                numbers[i].style.textshadow="0px 2px 4px #2b665e";
+            }
+
+            // trocar padrão de cores do igual
+            const igual = document.querySelectorAll(".igual")
+            for(let i = 0; igual.length > i; i++){
+                igual[i].style.color = "#ffffff";
+                igual[i].style.boxshadow = "inset 0px 6px 16px -12px #d9fbbe";
+                igual[i].style.background = "linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%)";
+                igual[i].style.backgroundcolor = "#b8e356";
+                igual[i].style.border= "1px solid #83c41a";
+                igual[i].style.textshadow="0px 2px 4px #86ae47";
+            }
+
+
             
              // troca do icon do botão troca de cor e troca de cor
             buttonCor.classList.remove("fas", "fa-moon", "moon-icon")
@@ -75,6 +124,10 @@ function buttonTrocarCor(){
              // troca do padrão de cores do botão troca de cor
             trocaDeCor.classList.remove("white")
             trocaDeCor.classList.add("black")
+
+
+           
+
         }
        
  
