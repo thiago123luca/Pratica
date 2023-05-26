@@ -124,58 +124,7 @@ body{
 	top:1px;
 }
 
-/* Botao - padrão de cores dois */
-.buttonPadraoDois{
-    margin: 5px;
-    min-width: 50px;
-    min-height: 50px;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:32px;
-	font-weight:bold;
-	padding:9px 23px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-    
-}
-
-/* Botao - padrão de cores dois */
-.buttonPadraoDois:hover{
-    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-}
-
-/* Botao - padrão de cores dois */
-.buttonPadraoDois:active{
-    position:relative;
-	top:1px;
-}
-
-
-/* organizador dos botões */
-#buttonEOperadores{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-}
-#zero{
-
-    grid-column: span 2; 
-
-}
-#apagar{
-    grid-column: span 2; 
-}
-
-
+/*botões de numeros com padrão de cores diferente (padrão um)*/
 .number{
     box-shadow:inset 0px 6px 16px -12px #91b8b3;
 	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
@@ -188,17 +137,16 @@ body{
 	text-decoration:none;
 	text-shadow:0px 2px 4px #2b665e;
 }
-
 .number:hover{
     background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
 	background-color:#6c7c7c;
 }
-
 .number:active{
     position:relative;
 	top:1px;
 }
 
+/* botão de igual com padrão de cores diferente (padrão um) */
 .igual{
     box-shadow:inset 0px 6px 16px -12px #d9fbbe;
 	background:linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
@@ -221,6 +169,65 @@ body{
     position:relative;
 	top:1px;
 }
+
+
+/* Botao - padrão de cores dois */
+.buttonPadraoDois{
+    margin: 5px;
+    min-width: 50px;
+    min-height: 50px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:32px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+
+}
+
+/* Botao - padrão de cores dois */
+.buttonPadraoDois:hover{
+    background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+
+/* Botao - padrão de cores dois */
+.buttonPadraoDois:active{
+    position:relative;
+	top:1px;
+}
+
+
+
+
+/* organizador dos botões */
+#buttonEOperadores{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+#zero{
+
+    grid-column: span 2; 
+
+}
+#apagar{
+    grid-column: span 2; 
+}
+
+
+
+
+
 
 
 

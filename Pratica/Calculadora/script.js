@@ -16,7 +16,6 @@ for(let i = 0; buttonCalc.length > i; i++){
 
 // Button troca de cor
 function buttonTrocarCor(){
-
     // Acessar o padrão de cores do botão determinado pelo botão troca de cor
     const trocaDeCor = document.getElementById("buttonTrocaDeCor")
     const buttonCor = document.getElementById("buttonCor")
@@ -35,7 +34,9 @@ function buttonTrocarCor(){
             for(let i = 0; buttonCalc.length > i; i++){
                 buttonCalc[i].classList.remove("buttonPadraoUm")
                 buttonCalc[i].classList.add("buttonPadraoDois")
+
             }
+    
             
             // troca do icon do botão troca de cor e troca de cor
             buttonCor.classList.remove("fas", "fa-sun", "sun-icon")
@@ -46,6 +47,9 @@ function buttonTrocarCor(){
             trocaDeCor.classList.remove("black")
             trocaDeCor.classList.add("white")
 
+
+          
+            
         }
         // verificar em qual padrão de cores está
         else if (trocaDeCor.classList.contains("white")){
